@@ -23,7 +23,7 @@ jobs:
       run: sudo ./configure
 
     - name: Install dependencies
-      run: sudo ninja
+      run: sudo make
 
     - name: Run check
       run: sudo make check
