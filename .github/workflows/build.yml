@@ -15,18 +15,18 @@ jobs:
     - uses: actions/checkout@v4
 
     - name: apt
-      run: apt update
+      run: sudo apt update
     - name: apt install
-      run: apt install ninja-build
+      run: sudo apt install ninja-build
 
     - name: configure
-      run: ./configure
+      run: sudo ./configure
 
     - name: Install dependencies
-      run: ninja
+      run: sudo ninja
 
     - name: Run check
-      run: make check
+      run: sudo make check
 
     - name: Run distcheck
-      run: make distcheck
+      run: sudo make distcheck
